@@ -30,24 +30,9 @@
             margin-bottom: 30px;
             font-weight: bold;
         }
-        .button {
-            background: linear-gradient(135deg, #0088cc, #00cc88);
-            border: none;
-            color: white;
-            padding: 15px 32px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 18px;
+        button {
             margin: 10px;
-            cursor: pointer;
-            border-radius: 50px;
-            box-shadow: 0 4px 15px rgba(0, 136, 204, 0.2);
-            transition: all 0.3s ease;
-        }
-        .button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(0, 136, 204, 0.3);
+            padding: 10px 20px;
         }
     </style>
 </head>
@@ -55,7 +40,8 @@
     <div class="container">
         <img src="昶青實業LOGO確定版-PNG (1).png" alt="昶青實業股份有限公司" class="logo">
         <h1>昶青實業行動儀表板</h1>
-        <a href="management.html" class="button">管理本部</a>
+        <button onclick="window.location.href='management.html'">管理本部</button>
+        <button onclick="window.location.href='platform.html'">全功能平台</button>
     </div>
 </body>
 </html>

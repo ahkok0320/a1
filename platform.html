@@ -31,12 +31,37 @@
             font-weight: bold;
         }
         .iframe-container {
+            position: relative;
+            padding-bottom: 16.97%; /* 205/1208 = 16.97% */
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
             margin: 20px auto;
-            max-width: 1208px;
+        }
+        .iframe-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
         }
         button {
             margin: 10px;
             padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #0088cc;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #006699;
+        }
+        @media (max-width: 768px) {
+            .iframe-container {
+                padding-bottom: 30%; /* 調整移動設備上的比例 */
+            }
         }
     </style>
 </head>
@@ -45,9 +70,9 @@
         <img src="昶青實業LOGO確定版-PNG (1).png" alt="昶青實業股份有限公司" class="logo">
         <h1>全功能平台</h1>
         <div class="iframe-container">
-            <iframe width="1208" height="205" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQHLKjaNa2mb0GUhEL-FQ4c-v_Ri-4s-tEUG-rDG_rGcrTXMgdRtWlEfX4G-oQ9lRrX65HHbY8PY4iH/pubchart?oid=380387773&amp;format=interactive"></iframe>
+            <iframe seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQHLKjaNa2mb0GUhEL-FQ4c-v_Ri-4s-tEUG-rDG_rGcrTXMgdRtWlEfX4G-oQ9lRrX65HHbY8PY4iH/pubchart?oid=380387773&amp;format=interactive"></iframe>
         </div>
-        <button onclick="window.location.href='index.html'">返回首頁</button>
+        <button onclick="window.location.href='management.html'">返回管理本部</button>
     </div>
 </body>
 </html>

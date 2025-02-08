@@ -14,39 +14,42 @@
             background: linear-gradient(135deg, #0088cc 0%, #00cc88 100%);
         }
         .container {
-            padding: 40px 20px;
+            padding: 20px;
             background: rgba(255, 255, 255, 0.9);
             border-radius: 20px;
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
             margin: 20px;
-        }
-        .logo {
-            max-width: 280px;
-            height: auto;
-            margin-bottom: 30px;
         }
         h1 {
             color: #333;
             margin-bottom: 30px;
             font-weight: bold;
         }
-        .iframe-container {
+        /* 響應式容器樣式 */
+        .responsive-iframe-container {
             position: relative;
-            padding-bottom: 16.97%; /* 205/1208 = 16.97% */
-            height: 0;
+            width: 100%;
+            max-width: 1208px; /* 原始 iframe 寬度 */
+            margin: 0 auto;
             overflow: hidden;
-            max-width: 100%;
-            margin: 20px auto;
         }
-        .iframe-container iframe {
+        /* 維持寬高比的包裝器 */
+        .aspect-ratio-wrapper {
+            position: relative;
+            padding-top: 17%; /* (205/1208)*100 約等於 17% */
+        }
+        /* iframe 樣式 */
+        .responsive-iframe {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
+            border: none;
         }
-        button {
-            margin: 10px;
+        /* 返回按鈕樣式 */
+        .back-button {
+            margin: 20px;
             padding: 10px 20px;
             font-size: 16px;
             cursor: pointer;
@@ -54,25 +57,41 @@
             color: white;
             border: none;
             border-radius: 5px;
+            text-decoration: none;
+            display: inline-block;
         }
-        button:hover {
+        .back-button:hover {
             background-color: #006699;
         }
-        @media (max-width: 768px) {
-            .iframe-container {
-                padding-bottom: 30%; /* 調整移動設備上的比例 */
+        /* 媒體查詢，針對不同螢幕尺寸調整 */
+        @media screen and (max-width: 768px) {
+            .aspect-ratio-wrapper {
+                padding-top: 30%; /* 在小螢幕上調整高度比例 */
+            }
+        }
+        @media screen and (max-width: 480px) {
+            .aspect-ratio-wrapper {
+                padding-top: 40%; /* 在更小的螢幕上調整高度比例 */
+            }
+            h1 {
+                font-size: 24px;
             }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <img src="昶青實業LOGO確定版-PNG (1).png" alt="昶青實業股份有限公司" class="logo">
         <h1>全功能平台</h1>
-        <div class="iframe-container">
-            <iframe seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQHLKjaNa2mb0GUhEL-FQ4c-v_Ri-4s-tEUG-rDG_rGcrTXMgdRtWlEfX4G-oQ9lRrX65HHbY8PY4iH/pubchart?oid=380387773&amp;format=interactive"></iframe>
+        <div class="responsive-iframe-container">
+            <div class="aspect-ratio-wrapper">
+                <iframe class="responsive-iframe"
+                        seamless
+                        scrolling="no"
+                        src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQHLKjaNa2mb0GUhEL-FQ4c-v_Ri-4s-tEUG-rDG_rGcrTXMgdRtWlEfX4G-oQ9lRrX65HHbY8PY4iH/pubchart?oid=380387773&amp;format=interactive">
+                </iframe>
+            </div>
         </div>
-        <button onclick="window.location.href='management.html'">返回管理本部</button>
+        <a href="management.html" class="back-button">返回管理本部</a>
     </div>
 </body>
 </html>

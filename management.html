@@ -3,32 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>管理本部</title>
+    <title>昶青實業 - 管理本部</title>
     <style>
         body {
             font-family: "Microsoft JhengHei", sans-serif;
             text-align: center;
-            padding: 20px;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #0088cc 0%, #00cc88 100%);
+        }
+        .container {
+            padding: 40px 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 20px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+        }
+        .logo {
+            max-width: 280px;
+            height: auto;
+            margin-bottom: 30px;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 30px;
+            font-weight: bold;
         }
         .button {
-            background-color: #4CAF50;
+            background: linear-gradient(135deg, #0088cc, #00cc88);
             border: none;
             color: white;
             padding: 15px 32px;
             text-align: center;
             text-decoration: none;
             display: inline-block;
-            font-size: 16px;
-            margin: 4px 2px;
+            font-size: 18px;
+            margin: 10px;
             cursor: pointer;
-            border-radius: 4px;
+            border-radius: 50px;
+            box-shadow: 0 4px 15px rgba(0, 136, 204, 0.2);
+            transition: all 0.3s ease;
+            width: 200px;
+        }
+        .button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 136, 204, 0.3);
+        }
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+        .back-button {
+            background: linear-gradient(135deg, #666666, #999999);
+            margin-top: 30px;
         }
     </style>
 </head>
 <body>
-    <h1>管理本部</h1>
-    <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vQHLKjaNa2mb0GUhEL-FQ4c-v_Ri-4s-tEUG-rDG_rGcrTXMgdRtWlEfX4G-oQ9lRrX65HHbY8PY4iH/pubhtml#" class="button" target="_blank">全功能平台</a>
-    <br>
-    <a href="index.html" class="button" style="background-color: #808080;">返回首頁</a>
+    <div class="container">
+        <img src="昶青實業LOGO確定版-PNG (1).png" alt="昶青實業股份有限公司" class="logo">
+        <h1>管理本部</h1>
+        <div class="button-container">
+            <a href="https://docs.google.com/spreadsheets/d/1QS32GZp8-aaS6gF5dW1SzYKmf8YgNGHx/edit" class="button">請假系統</a>
+            <a href="https://docs.google.com/spreadsheets/d/1FgL3yiBr0c8UJKpNbQsHfOYP2vKBILXk/edit" class="button">加班系統</a>
+            <a href="https://docs.google.com/spreadsheets/d/1gHVRjGxC2QlKqpGpSBzRMGqQJ7h7IQSE/edit" class="button">出差系統</a>
+            <a href="https://docs.google.com/spreadsheets/d/1-Rkv3oc2PGD_9RcxO-MBgWvJg8_Cw9Ej/edit" class="button">教育訓練</a>
+            <a href="https://docs.google.com/spreadsheets/d/1BWxEALk_z-oYhYQqGrC1ZfKqYxsZYbDv/edit" class="button">人事資料</a>
+            <a href="index.html" class="button back-button">返回首頁</a>
+        </div>
+    </div>
 </body>
 </html>

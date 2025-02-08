@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>昶青實業 - 管理本部</title>
+    <title>全功能平台</title>
     <style>
         body {
             font-family: "Microsoft JhengHei", sans-serif;
@@ -30,46 +30,24 @@
             margin-bottom: 30px;
             font-weight: bold;
         }
-        .button {
-            background: linear-gradient(135deg, #0088cc, #00cc88);
-            border: none;
-            color: white;
-            padding: 15px 32px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 18px;
+        .iframe-container {
+            margin: 20px auto;
+            max-width: 1208px;
+        }
+        button {
             margin: 10px;
-            cursor: pointer;
-            border-radius: 50px;
-            box-shadow: 0 4px 15px rgba(0, 136, 204, 0.2);
-            transition: all 0.3s ease;
-            width: 200px;
-        }
-        .button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(0, 136, 204, 0.3);
-        }
-        .button-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 15px;
-        }
-        .back-button {
-            background: linear-gradient(135deg, #666666, #999999);
-            margin-top: 30px;
+            padding: 10px 20px;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <img src="昶青實業LOGO確定版-PNG (1).png" alt="昶青實業股份有限公司" class="logo">
-        <h1>管理本部</h1>
-        <div class="button-container">
-            <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vQHLKjaNa2mb0GUhEL-FQ4c-v_Ri-4s-tEUG-rDG_rGcrTXMgdRtWlEfX4G-oQ9lRrX65HHbY8PY4iH/pubhtml" class="button">全功能平台</a>
-            <a href="index.html" class="button back-button">返回首頁</a>
+        <h1>全功能平台</h1>
+        <div class="iframe-container">
+            <iframe width="1208" height="205" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQHLKjaNa2mb0GUhEL-FQ4c-v_Ri-4s-tEUG-rDG_rGcrTXMgdRtWlEfX4G-oQ9lRrX65HHbY8PY4iH/pubchart?oid=380387773&amp;format=interactive"></iframe>
         </div>
+        <button onclick="window.location.href='index.html'">返回首頁</button>
     </div>
 </body>
 </html>
